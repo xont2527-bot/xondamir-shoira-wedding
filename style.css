@@ -345,6 +345,13 @@ section{
         transform:translateY(30px);
 
     }
+    body {
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+    }
 
     to{
 
