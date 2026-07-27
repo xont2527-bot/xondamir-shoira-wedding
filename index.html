@@ -4,72 +4,41 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Xondamir ❤️ Shoira</title>
 
-<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
-rel="stylesheet">
-
-<!-- CSS -->
-
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
-<body><div id="petals"></div>
+<body>
 
+<!-- GOLD PARTICLES -->
 <div id="goldParticles"></div>
 
-<div id="meteorContainer"></div><section id="intro">
+<!-- SAKURA -->
+<div id="petals"></div>
 
-<div class="intro-overlay"></div>
+<!-- METEOR -->
+<div id="meteorContainer"></div>
+
+<!-- INTRO -->
+
+<section id="intro">
 
 <div class="intro-content">
 
-<div class="bismillah">
+<h2>Hurmatli mehmon!</h2>
 
-﷽
-
-</div>
-
-<h2>
-
-Assalomu alaykum
-va rohmatullohi
-va barokatuh
-
-</h2>
-
-<h1>
-
-Xondamir
-
-<span>❤️</span>
-
-Shoira
-
-</h1>
-
-<p>
-
-Sizni nikoh
-to'yimizga
-chin dildan
-taklif qilamiz.
-
-</p>
+<p>Sizni hayotimizning eng unutilmas kuniga taklif qilamiz.</p>
 
 <button id="enterBtn">
 
@@ -79,136 +48,248 @@ Taklifnomani ochish
 
 </div>
 
-</section><section class="hero">
+</section>
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+<button id="musicBtn">
+
+🎵
+
+</button>
+
+<!-- HERO -->
+
+<section class="hero">
 
 <div class="hero-overlay"></div>
 
-<div class="hero-content"><div class="photo-frame">
+<div class="hero-content">
 
-<img
-src="images/photo.jpg"
-alt="Wedding">
+<h3 class="hero-subtitle">
 
-</div><h1 class="couple-name">
+Nikoh To'yi
+
+</h3>
+
+<h1 class="hero-title">
 
 Xondamir
 
-<span class="heart">
-
-❤️
-
-</span>
+<span>&</span>
 
 Shoira
 
-</h1><div class="date-card">
+</h1>
 
-<span class="day">
+<p class="hero-date">
 
-09
+09 • Avgust • 2026
 
-</span>
+</p>
 
-<span class="month">
+</div>
 
-AVGUST
+</section><!-- ===========================
+COUNTDOWN
+=========================== -->
 
-</span>
+<section class="countdown">
 
-<span class="year">
+    <h2 class="section-title">
+        To'y boshlanishiga qoldi
+    </h2>
 
-2026
+    <div class="countdown-box">
 
-</span>
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>Kun</small>
+        </div>
 
-</div><p class="hero-text">
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>Soat</small>
+        </div>
 
-Sizni hayotimizning
-eng unutilmas
-kunida ko'rishdan
-mamnun bo'lamiz.
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>Daqiqa</small>
+        </div>
 
-</p>"</div>
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>Soniya</small>
+        </div>
 
-</section><!-- ==========================================
+    </div>
+
+</section>
+
+<!-- ===========================
 EVENT
-========================================== -->
+=========================== -->
 
 <section class="event" id="event">
 
     <h2 class="section-title">
-        To'y Tafsilotlari
+        Marosim Tafsilotlari
     </h2>
 
     <div class="event-wrapper">
 
         <div class="event-card">
 
-            <h3>💍 Nikoh marosimi</h3>
+            <h3>🌸 Qiz bazmi</h3>
+
+            <p><strong>📅 Sana:</strong> 08-Avgust 2026</p>
+
+            <p><strong>🕖 Vaqt:</strong> 19:00</p>
+
+            <p><strong>📍 Manzil:</strong></p>
 
             <p>
-                09-Avgust 2026
+                Chuya qishlog'i<br>
+                Yangiboyev Muzaffar xonadoni
             </p>
 
-            <p>
-                Soat 10:00
-            </p>
-
-            <p>
-                Zarafshon shahar FHDYO bo'limi
-            </p>
+            <a href="#" class="map-btn" target="_blank">
+                📍 Xaritada ko'rish
+            </a>
 
         </div>
 
         <div class="event-card">
 
-            <h3>🎉 To'y tantanasi</h3>
+            <h3>💍 To'y marosimi</h3>
+
+            <p><strong>📅 Sana:</strong> 09-Avgust 2026</p>
+
+            <p><strong>🕕 Vaqt:</strong> 18:00</p>
+
+            <p><strong>📍 Manzil:</strong></p>
 
             <p>
-                09-Avgust 2026
+                Nurota tumani<br>
+                Sherdor to'yxonasi
             </p>
 
-            <p>
-                Soat 18:00
-            </p>
-
-            <p>
-                Zarafshon shahri
-            </p>
-
-            <p>
-                "_________" To'yxonasi
-            </p>
+            <a href="#" class="map-btn" target="_blank">
+                📍 Xaritada ko'rish
+            </a>
 
         </div>
 
     </div>
 
-</section><a
+    </section><!-- ===========================
+INVITATION
+=========================== -->
 
-class="map-btn"
+<section class="invite-text">
 
-href="https://maps.google.com"
-
-target="_blank">
-
-📍 Manzilni ochish
-
-</a><section class="invite-text">
-
-    <h2>
+    <h2 class="section-title">
         Aziz mehmon!
     </h2>
 
     <p>
+        Sizni farzandlarimiz
+    </p>
 
-        Sizni hayotimizdagi eng
-        quvonchli kunda biz bilan
-        birga bo'lishga samimiy
-        taklif qilamiz.
+    <h3 class="couple-name">
+        Xondamir ❤️ Shoira
+    </h3>
+
+    <p>
+        ning nikoh to'yi munosabati bilan
+        bo'lib o'tadigan tantanali
+        to'y marosimiga chin dildan
+        taklif etamiz.
+    </p>
+
+    <p>
+        Quvonchimizga sherik bo'lib,
+        ushbu unutilmas kunimizga
+        tashrif buyurishingiz biz uchun
+        katta sharaf bo'ladi.
+    </p>
+
+</section>
+
+<!-- ===========================
+DUO
+=========================== -->
+
+<section class="dua">
+
+    <div class="dua-box">
+
+        <h2>
+            🤲 Ezgu tilak
+        </h2>
+
+        <p>
+
+            Alloh taolo ushbu
+            xonadonga mehr,
+            muhabbat,
+            fayzu baraka,
+            sog'lik va
+            baxt-saodat
+            ato etsin.
+
+            Omin.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+    <h2>
+        Sizni kutamiz!
+    </h2>
+
+    <p>
+
+        Hurmat bilan
 
     </p>
 
-</section><script src="script.js"></script>
+    <h3>
+
+        Yangiboyev Muzaffar oilasi
+
+    </h3>
+
+    <h3>
+
+        Eshonqulov Ulug'bek oilasi
+
+    </h3>
+
+    <p class="footer-date">
+
+        09-Avgust-2026
+
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
