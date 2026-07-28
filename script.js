@@ -1,14 +1,9 @@
 "use strict";
 
-/* ===========================
-   ELEMENTLAR
-=========================== */
-
+/* ELEMENTLAR */
 const intro = document.getElementById("intro");
 const enterBtn = document.getElementById("enterBtn");
-
 const music = document.getElementById("music");
-const musicBtn = document.getElementById("musicBtn");
 
 const days = document.getElementById("days");
 const hours = document.getElementById("hours");
@@ -19,101 +14,65 @@ const petals = document.getElementById("petals");
 const goldParticles = document.getElementById("goldParticles");
 const meteorContainer = document.getElementById("meteorContainer");
 
-/* ===========================
-   INTRO
-=========================== */
+/* INTRO + MUSIC */
+if (enterBtn) {
+    enterBtn.addEventListener("click", async () => {
 
-if (enterBtn && intro) {
-
-    enterBtn.addEventListener("click", () => {
+        if (music) {
+            try {
+                music.volume = 0.5;
+                await music.play();
+            } catch (e) {
+                console.log(e);
+            }
+        }
 
         intro.style.opacity = "0";
 
         setTimeout(() => {
-
             intro.style.display = "none";
-
         }, 800);
 
-        if (music) {
-
-            music.play().catch(() => {});
-
-        }
-
     });
+}
 
-/* ===========================
-   COUNTDOWN
-=========================== */
-
+/* COUNTDOWN */
 const weddingDate = new Date("2026-08-09T18:00:00").getTime();
 
 function updateCountdown() {
 
-    if (!(days && hours && minutes && seconds)) return;
-
-    const now = Date.now();
-
+    const now = new Date().getTime();
     const distance = weddingDate - now;
 
-    if (distance <= 0) {
+    if (distance < 0) return;
 
-        days.textContent = "00";
-        hours.textContent = "00";
-        minutes.textContent = "00";
-        seconds.textContent = "00";
-
-        return;
-
-    }
-
-    days.textContent = String(Math.floor(distance / 86400000)).padStart(2, "0");
-    hours.textContent = String(Math.floor((distance % 86400000) / 3600000)).padStart(2, "0");
-    minutes.textContent = String(Math.floor((distance % 3600000) / 60000)).padStart(2, "0");
-    seconds.textContent = String(Math.floor((distance % 60000) / 1000)).padStart(2, "0");
-
+    days.textContent = String(Math.floor(distance / (1000*60*60*24))).padStart(2,"0");
+    hours.textContent = String(Math.floor((distance%(1000*60*60*24))/(1000*60*60))).padStart(2,"0");
+    minutes.textContent = String(Math.floor((distance%(1000*60*60))/(1000*60))).padStart(2,"0");
+    seconds.textContent = String(Math.floor((distance%(1000*60))/1000)).padStart(2,"0");
 }
 
 updateCountdown();
-
-setInterval(updateCountdown, 1000);/* ===========================
-   SAKURA
-=========================== */
-
+setInterval(updateCountdown,1000);/* SAKURA */
 if (petals) {
-
     setInterval(() => {
-
         const petal = document.createElement("span");
-
         petal.className = "petal";
-
         petal.style.left = Math.random() * 100 + "vw";
         petal.style.animationDuration = (6 + Math.random() * 5) + "s";
-
         petals.appendChild(petal);
 
         setTimeout(() => {
             petal.remove();
         }, 12000);
-
     }, 400);
-
 }
 
-/* ===========================
-   GOLD PARTICLES
-=========================== */
-
+/* GOLD PARTICLES */
 if (goldParticles) {
-
     setInterval(() => {
-
         const dot = document.createElement("span");
-
         dot.className = "gold-dot";
-
         dot.style.left = Math.random() * 100 + "vw";
         dot.style.top = Math.random() * 100 + "vh";
 
@@ -122,23 +81,14 @@ if (goldParticles) {
         setTimeout(() => {
             dot.remove();
         }, 6000);
-
     }, 300);
-
 }
 
-/* ===========================
-   METEOR
-=========================== */
-
+/* METEOR */
 if (meteorContainer) {
-
     setInterval(() => {
-
         const meteor = document.createElement("span");
-
         meteor.className = "meteor";
-
         meteor.style.left = Math.random() * 100 + "vw";
 
         meteorContainer.appendChild(meteor);
@@ -146,61 +96,18 @@ if (meteorContainer) {
         setTimeout(() => {
             meteor.remove();
         }, 2500);
-
     }, 5000);
-
 }
 
-/* ===========================
-   PHOTO GLOW
-=========================== */
-
-const photo = document.querySelector(".photo-frame");
-
-if (photo) {
-
-    setInterval(() => {
-
-        photo.classList.toggle("photo-glow");
-
-    }, 2000);
-
-}
-
-/* ===========================
-   TITLE SHINE
-=========================== */
-
-document.querySelectorAll(".section-title, .couple-name").forEach(title => {
-
-    setInterval(() => {
-
-        title.classList.toggle("shine");
-
-    }, 3000);
-
-});
-
-/* ===========================
-   SCROLL ANIMATION
-=========================== */
-
+/* SCROLL ANIMATION */
 const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-
             entry.target.classList.add("show");
-
         }
-
     });
-
 });
 
-document.querySelectorAll(".event-card, .countdown, .invite-text").forEach(el => {
-
+document.querySelectorAll(".event-card,.countdown,.invite-text").forEach((el) => {
     observer.observe(el);
-
 });
