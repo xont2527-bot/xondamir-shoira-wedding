@@ -23,17 +23,7 @@ body{
     font-family:'Poppins',sans-serif;
     color:#fff;
 
-    background:
-    radial-gradient(circle at top,
-        rgba(255,215,0,.35) 0%,
-        rgba(255,184,28,.18) 15%,
-        rgba(75,55,18,.85) 35%,
-        rgba(20,15,10,1) 65%,
-        #050505 100%);
-
-    background-color:#050505;
-
-    background-attachment:fixed;
+    background:url("background.jpg") center center / cover no-repeat fixed;
 }
 
 /* LINKS */
