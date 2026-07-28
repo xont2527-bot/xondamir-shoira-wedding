@@ -16,16 +16,16 @@ html{
 }
 
 body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
 
     font-family:'Poppins',sans-serif;
 
-    background:#0d0b09;
-
     color:#fff;
 
-    overflow-x:hidden;
-
-    position:relative;
+    background:
+    radial-gradient(circle at top,#4b3712 0%,#1a1408 25%,#090909 65%,#000000 100%);
 
 }
 
