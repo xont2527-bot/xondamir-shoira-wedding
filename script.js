@@ -49,23 +49,20 @@ if (enterBtn && intro) {
    MUSIC
 =========================== */
 
-if (musicBtn && music) {
+const music = document.getElementById("music");
+const enterBtn = document.getElementById("enterBtn");
+const intro = document.getElementById("intro");
 
-    musicBtn.addEventListener("click", () => {
+enterBtn.addEventListener("click", async () => {
+    try {
+        music.volume = 0.5;
+        await music.play();
+    } catch (e) {
+        console.log("Audio ishga tushmadi:", e);
+    }
 
-        if (music.paused) {
-
-            music.play().catch(() => {});
-            musicBtn.textContent = "🔊";
-
-        } else {
-
-            music.pause();
-            musicBtn.textContent = "🔇";
-
-        }
-
-    });
+    intro.style.display = "none";
+});
 
 }
 
