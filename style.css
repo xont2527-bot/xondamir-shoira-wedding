@@ -50,43 +50,43 @@ VARIABLES
 BACKGROUND
 =================================== */
 
-.background{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    min-height:100%;
-    z-index:-3;
-
-    background-image:url("marble.jpg");
-    background-repeat:no-repeat;
-    background-position:center top;
-    background-size:cover;
-
-    overflow:hidden;
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#faf8f2;
+    color:#333;
+    overflow-x:hidden;
+    line-height:1.7;
+    position:relative;
 }
 
-.overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    min-height:100%;
-    z-index:-2;
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
 
-    background:linear-gradient(
-        rgba(255,255,255,.10),
-        rgba(255,255,255,.22)
-    );
+    background:
+        linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.20)),
+        url("marble.jpg");
 
-    pointer-events:none;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    z-index:-3;
+
+    transform:translateZ(0);
+    -webkit-transform:translateZ(0);
+
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
 }
 
 #particles{
     position:fixed;
     inset:0;
     pointer-events:none;
-    z-index:-1;
+    z-index:-2;
 }
 
 /* ===================================
