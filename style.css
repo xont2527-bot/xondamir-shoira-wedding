@@ -50,59 +50,43 @@ VARIABLES
 BACKGROUND
 =================================== */
 
-body{
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background:#faf8f2;
-    color:#333;
-    overflow-x:hidden;
-    line-height:1.7;
-    position:relative;
-}
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
+.background{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:100%;
+    z-index:-3;
 
     background-image:url("marble.jpg");
     background-repeat:no-repeat;
-    background-position:center center;
+    background-position:center top;
+    background-size:cover;
 
-    background-size:100% auto;
-
-    z-index:-3;
-
-    transform:none !important;
-    animation:none !important;
-    transition:none !important;
-
-    will-change:auto;
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
-    -webkit-transform:translateZ(0);
+    overflow:hidden;
 }
 
 .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:100%;
+    z-index:-2;
 
-position:fixed;
+    background:linear-gradient(
+        rgba(255,255,255,.10),
+        rgba(255,255,255,.22)
+    );
 
-top:0;
+    pointer-events:none;
+}
 
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:linear-gradient(
-180deg,
-rgba(255,255,255,.12),
-rgba(255,255,255,.25)
-);
-
-z-index:-2;
-
+#particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
 }
 
 /* ===================================
@@ -384,16 +368,16 @@ text-align:center;
     padding:50px 35px;
     border-radius:30px;
 
-    background:rgba(255,255,255,.18);
+    background:rgba(255,255,255,0.08);
 
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
-    border:1px solid rgba(255,255,255,.35);
+    border:1px solid rgba(255,255,255,0.25);
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,.15),
-        0 0 20px rgba(212,175,55,.15);
+        0 10px 35px rgba(0,0,0,.12),
+        0 0 20px rgba(212,175,55,.12);
 }
 
 .subtitle{
