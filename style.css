@@ -50,22 +50,36 @@ VARIABLES
 BACKGROUND
 =================================== */
 
-.background{
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#faf8f2;
+    color:#333;
+    overflow-x:hidden;
+    line-height:1.7;
+    position:relative;
+}
 
-position:fixed;
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
 
-top:0;
+    background-image:url("marble.jpg");
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
 
-left:0;
+    z-index:-3;
 
-width:100%;
+    transform:none !important;
+    animation:none !important;
+    transition:none !important;
 
-height:100%;
-
-background:url("marble.jpg") center/cover no-repeat;
-
-z-index:-3;
-
+    will-change:auto;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform:translateZ(0);
 }
 
 .overlay{
