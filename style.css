@@ -68,7 +68,8 @@ body::before{
     background-image:url("marble.jpg");
     background-repeat:no-repeat;
     background-position:center center;
-    background-size:cover;
+
+    background-size:100% auto;
 
     z-index:-3;
 
